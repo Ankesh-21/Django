@@ -4,4 +4,13 @@
 {% endblock %}
 {% block content %}
     <h1>This is Ankesh Homepage</h1>
+    {% for chai in chais %}
+        <img src="{{chai.image.url}}" alt="">
+        <h2>{{chai.name}}</h2>
+        <a href={% url "chai_details" chai.id %}>
+            <button type=button>
+                Check Details
+            </button>
+        </a>
+    {% endfor %}
 {% endblock %}
