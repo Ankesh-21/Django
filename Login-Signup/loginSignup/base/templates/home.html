@@ -1,5 +1,5 @@
 I am Now at Home
-<form method = 'POST' action = "{% url 'accounts/logout/' %}">
+<form method = 'POST' action = "{% url 'base:logout' %}">
     {% csrf_token %}
     <button type='submit'>Logout</button>
 </form>
